@@ -14,7 +14,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border:0px solid green;
+    border:0px solid green;   
 }
 
 .logo-content{
@@ -217,4 +217,11 @@ select{
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+}
+/* day44 UC2 */
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
