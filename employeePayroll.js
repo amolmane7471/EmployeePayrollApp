@@ -144,8 +144,8 @@ const createEmployeePayroll = () => {
     return employeePayrollData;
 }
 
-const getSelectedValues = (proprtyValue) => {
-    let allItems = document.querySelectorAll(proprtyValue);
+const getSelectedValues = (propertyValue) => {
+    let allItems = document.querySelectorAll(propertyValue);
     let selItems = [];
     allItems.forEach(item => {
         if(item.checked) 
@@ -175,4 +175,34 @@ function createAndUpdateStorage(employeePayrollData){
     }
     alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList));
+}
+
+/*day44 UC5*/
+const resetForm = () => {
+    setValue('#name',' ');
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','');
+    setValue('#notes','');
+    setValue('#day','1');
+    setValue('#month','January');
+    setValue('#Year','2020');
+} 
+
+const unsetSelectedValues = (propertyValue)=> {
+   let allItems = document.querySelectorAll(propertyValue);
+   allItems.forEach(item =>{
+   item.checked = false; 
+    });
+}
+
+const setTextValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.textContent = value;
+}
+
+const setValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.value = value;
 }
