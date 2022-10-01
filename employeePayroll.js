@@ -115,7 +115,7 @@ class EmployeePayrollData {
     }
 }
 
-/*day44 UC3*/ 
+ 
 const save = () =>  {
 try{
     let employeePayrollData = createEmployeePayroll();
@@ -162,7 +162,6 @@ const getInputElementValue = (id) => {
     let value = document.getElementById(id).value;
     return value;
 }
-/*day44 UC4*/
 
 function createAndUpdateStorage(employeePayrollData){
     let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
@@ -177,7 +176,6 @@ function createAndUpdateStorage(employeePayrollData){
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList));
 }
 
-/*day44 UC5*/
 const resetForm = () => {
     setValue('#name',' ');
     unsetSelectedValues('[name=profile]');
